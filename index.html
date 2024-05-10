@@ -1,0 +1,242 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+#grad1
+{
+padding:20px 20px;
+background-image: linear-gradient(lightgray,white,white,white,white,lightgray,gray);
+}
+input,select
+{
+border: 1px solid grey;
+border-radius:5px;
+}
+table
+{
+-webkit-box-shadow: 3px 7px 27px 0px rgba(87,87,87,1);
+-moz-box-shadow: 3px 7px 27px 0px rgba(87,87,87,1);
+box-shadow: 3px 7px 27px 0px rgba(87,87,87,1);
+}
+#div2
+{
+margin-top:10px;
+margin-left:30px;
+width:400px;
+max-width:80%;
+padding:6px 20px;
+webkit-box-shadow: 1px 4px 26px 9px rgba(0,0,0,0.75);
+moz-box-shadow: 1px 4px 26px 9px rgba(0,0,0,0.75);
+box-shadow: 1px 4px 26px 9px rgba(0,0,0,0.75);
+}
+.bg{
+background:url('/static/images/bg.jpg') no-repeat;
+background-size:cover;
+width:100%;
+min-height:70%;
+-webkit-box-shadow: 1px 4px 26px 9px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 4px 26px 9px rgba(0,0,0,0.75);
+box-shadow: 1px 4px 26px 9px rgba(0,0,0,0.75);
+}
+h1
+{
+font-family: "Times New Roman";
+font-weight: bold;
+text-shadow: 1px 1px 4px black, 0 0 35px black, 0 0 30px black;
+font-style: italic;
+color: white;
+margin-left:15px;
+}
+h2,h3
+{
+font-family: "Times New Roman";
+font-weight: bold;
+text-shadow: 5px 5px 5px white, -2px -2px 15px white, 0 0 15px white;
+}
+#p1
+{
+font-size:22;
+font-family: "Times New Roman";
+font-weight: bold;
+font-style: italic;
+color:white;
+margin-left:15px;
+text-shadow: 1px 1px 5px black, 0 0 35px black, 0 0 5px white;
+}
+#a1
+{
+font-size:22;
+font-family: "Times New Roman";
+font-weight: bold;
+font-style: italic;
+color:white;
+margin-left:15px;
+text-shadow: 1px 1px 5px black, 0 0 35px black, 0 0 5px white;
+}
+#a1:hover{
+color:yellow;
+text-decoration:none;
+}
+#p2{
+font-family: "Times New Roman";
+text-shadow: 2px 2px 4px #000000;
+font-weight: bold;
+font-style: italic;
+color: white;
+font-size:21px;
+}
+th
+{
+font-family: "Times New Roman";
+font-weight: bold;
+font-size:17;
+}
+
+label 
+{
+font-family: "Times New Roman";
+font-size:17;
+color: white;
+font-weight: bold;
+text-shadow: 2px 2px 4px #000000;
+}
+#b1
+{
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.25);
+background-color: #4CAF50;
+color: white;
+}
+ul
+{
+background-color:inherit;
+cursor:pointer;
+font-size:17px;
+font-family:"Times New Roman";
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<div id="div1" class="container-fluid bg tab-content">
+<h1>Diet Recomendation System for diabetes</h1>
+<p id="p1">We Are Here To Help !!</p>
+<a id="a1" href="/diabetes">Click here to know about the diagnosis tests we perform..</a>
+<div class="row">
+       <div id="div2" class="col-xs-12 col-sm-4 col-md-4">
+       <form method="POST" action="">
+		<p id="p2">Enter your details :</p>
+		<label for="age">Age : </label>
+		<input type="number" name="age" id="age">
+                <br>
+      		<label for="gender">Gender:</label>
+		<select name="gender" id="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select>
+		<br>
+		<label for="height">Height:</label>
+		<input type="number" name="height" id="height">
+		<select name="height_unit" id="height_unit">
+			<option value="cm">CM</option>
+			<option value="m">M</option>
+		</select>
+		<br>
+		<label for="weight">Weight:</label>
+		<input type="number" name="weight" id="weight">
+		<select name="weight_unit" id="weight_unit">
+			<option value="kg">KG</option>
+			<option value="lbs">LBS</option>
+		</select>
+		<br>
+		<label for="diet">Diet:</label>
+		<select name="diet" id="diet">
+			<option value="veg">Veg</option>
+			<option value="nonveg">Non-Veg</option>
+		</select>
+ <br>
+		<button id="b1" type="submit" class="btn btn-success btn-block" value="Recommend">Recommend</button>
+	</form>
+        </div>
+        </div>
+        </div>
+<div id="grad1">
+<h2>Exercise :</h2>
+	<table class="table table-bordered col-sm-6" >
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Duration</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in exercise %}
+			<tr>
+				<td>{{ item.name }}</td>
+				<td>{{ item.duration }} minutes</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<h2>Diet :</h2>
+	<h3>Breakfast</h3>
+	<table class="table table-bordered col-sm-6">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Amount</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in diet.breakfast %}
+			<tr>
+				<td>{{ item.name }}</td>
+				<td>{{ item.amount }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<h3>Lunch</h3>
+	<table class="table table-bordered col-sm-6">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Amount</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in diet.lunch %}
+			<tr>
+				<td>{{ item.name }}</td>
+				<td>{{ item.amount }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<h3>Dinner</h3>
+	<table class="table table-bordered col-sm-6">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Amount</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in diet.dinner %}
+			<tr>
+				<td>{{ item.name }}</td>
+				<td>{{ item.amount }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+        <button id="b1" type="submit" class="btn btn-success btn-block">Download PDF</button>
+<br>
+</div>
+</body>
+</html>
+        
+
