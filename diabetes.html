@@ -1,0 +1,184 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+	#b1{
+		margin:auto;
+		padding:10px;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.25);
+		background-color: #4CAF50;
+	}
+	h1{
+		text-align:center;
+		margin-top:7px;
+		font-family: "Times New Roman";
+		font-weight: bold;
+		text-shadow: 1px 1px 1px black, 0 0 35px black, 0 0 25px black;
+		font-style: italic;
+		color: white;
+		margin-left:15px;
+	}
+	table
+		{
+		-webkit-box-shadow: 3px 7px 27px 0px rgba(87,87,87,1);
+		-moz-box-shadow: 3px 7px 27px 0px rgba(87,87,87,1);
+		box-shadow: 3px 7px 27px 0px rgba(87,87,87,1);
+	}
+	h3{
+		font-family: "Times New Roman";
+		font-weight: bold;
+		text-shadow: 1px 1px 6px black, 0 0 6px black, 0 0 10px grey;
+		color:white;
+	}
+	#p1{
+		margin-top:25px;
+		margin-left:20px;
+		font-family: "Times New Roman";
+		font-weight: bold;
+		font-style: italic;
+		text-shadow: 1px 1px 4px black, 0 0 2px black, 0 0 2px black;
+		font-size:22;
+		color:white;
+	}
+	p,tr{
+		font-family: "Times New Roman";
+		font-size:18;
+	}
+	#d3{
+		padding:20px 20px;
+		background:linear-gradient(lightblue,white,white,lightblue,dodgerblue,blue);
+	}
+	#d2{
+		padding:20px 20px;
+		background:linear-gradient(lightblue,white,white,lightblue)
+	}
+	#d1{
+		padding:20px 20px;
+		background:linear-gradient(blue,dodgerblue,white,white,white,lightblue)
+	}
+	a{
+		color: white;
+	}
+	.btn:hover{
+		text-decoration:none;
+		color:yellow
+	}
+</style>
+</head>
+<div id="d1">
+	<h1>Diagnosis of Diabetes</h1>
+	<p id="p1">The following tests are used for the diagnosis of diabetes:<p>
+	<ul> 
+	<li> <h3>Fasting Plasma Glucose (FPG) Test </h3> </li>
+	<p>The FPG is most reliable when done in the morning. Results and their meaning are shown in table 1.
+	If your fasting glucose level is 100 to 125 mg/dL, you have a form of prediabetes called impaired
+	fasting glucose (IFG), meaning that you are more likely to develop type 2 diabetes but do not have it yet. 
+	A level of 126 mg/dL or above, confirmed by repeating the test on another day, means that you have diabetes.</p>
+	<div class="table1">   
+		<p>Table 1. Fasting Plasma Glucose Test</p>
+		<table class="table table-bordered">
+		<thead>
+		<tr>
+        <th>Plasma Glucose Result (mg/dL)</th>
+        <th>Diagnosis</th>
+		</tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>99 and below</td>
+			<td>Normal</td>
+		  </tr>
+		  <tr>
+			<td>100 to 125</td>
+			<td>Prediabetes(impaired fasting glucose)</td>
+		  </tr>
+		  <tr>
+			<td>126 and above</td>
+			<td>Diabetes</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
+</ul>
+</div>
+<div id="d2">	
+        <ul>
+	<li> <h3>Oral Glucose Tolerance Test (OGTT) </h3> </li>
+	<p>Research has shown that the OGTT is more sensitive than the FPG test for diagnosing prediabetes, but it is less convenient to administer. 
+	The OGTT requires you to fast for at least eight hours before the test. 
+	Your plasma glucose is measured immediately before and two hours after you drink a liquid containing 75 grams of glucose dissolved in water. 
+	Results and what they mean are shown in table 2.</p>
+	<div class="table2">   
+		<p>Table 2. Oral Glucose Tolerance Test</p>
+		<table class="table table-bordered">
+		<thead>
+		<tr>
+        <th>2-Hour Plasma Glucose Result (mg/dL)</th>
+        <th>Diagnosis</th>
+		</tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>139 and below</td>
+			<td>Normal</td>
+		  </tr>
+		  <tr>
+			<td>140 to 199</td>
+			<td>Prediabetes(impaired fasting glucose)</td>
+		  </tr>
+		  <tr>
+			<td>200 and above</td>
+			<td>Diabetes</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
+</ul>
+</div>
+<div id="d3">
+<ul>
+	<h3>Gestational diabetes is also diagnosed based on plasma glucose values measured during the OGTT</h3>
+	<p>Blood sugar levels are checked four times during the test. If your blood sugar levels are above
+	normal at least twice during the test, you have gestational diabetes. 
+	Table 3 shows the above-normal results for the OGTT for gestational diabetes.</p>
+	<div class="table3">   
+		<p>Table 3. Gestational Diabetes: Above-Normal Results for the Oral Glucose Tolerance Test</p>
+		<table class="table table-bordered">
+		<thead>
+		<tr>
+        <th>When</th>
+        <th>Plasma Glucose Result(mg/dL)</th>
+		</tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>Fasting</td>
+			<td>95 or higher</td>
+		  </tr>
+		  <tr>
+			<td>At 1 hour</td>
+			<td>180 or higher</td>
+		  </tr>
+		  <tr>
+			<td>At 2 hours</td>
+			<td>155 or higher</td>
+		  </tr>
+		  <tr>
+			<td>At 3 hours</td>
+			<td>140 or higher</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
+	</ul>
+<br>
+<div class="text-center">
+<a id="b1" href="/" class="btn btn-primary" role="button">Back</a>
+</div>
+</div>
+</html>
+	
